@@ -35,12 +35,12 @@ function App() {
     }
     setModalOpen(false);
   }
-  return <div className="modal">
+  return <div >
     <h1>User Details Modal</h1>
     <button type='button' onClick={() => setModalOpen(!modalOpen)}>Open Form</button>
     {
-      modalOpen && <div className="modal-content" style={{ position: 'fixed', top: '30vh', left: '30vw', display: 'flex', justifyContent: 'center', alignItems: 'center' }} ref={modalRef}>
-        <form onSubmit={handleFormSubmit} style={{ backgroundColor: 'gray', height: '40vh', width: '40vw', display: 'flex', justifyContent: 'center', flexDirection: 'column', alignItems: 'center', gap: 10, borderRadius: '10px' }}>
+      modalOpen && <div className="modal"  style={{ position: 'fixed', top: '30vh', left: '30vw', display: 'flex', justifyContent: 'center', alignItems: 'center' }} ref={modalRef}>
+        <form className="modal-content" onSubmit={handleFormSubmit} style={{ backgroundColor: 'gray', height: '40vh', width: '40vw', display: 'flex', justifyContent: 'center', flexDirection: 'column', alignItems: 'center', gap: 10, borderRadius: '10px' }}>
           <h2>Fill Details</h2>
           <div>
             <label htmlFor="username">Username: </label>
